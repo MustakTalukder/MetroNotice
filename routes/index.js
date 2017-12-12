@@ -9,12 +9,26 @@ router.get('/message', function(req, res) {
       res.send('somthing wrong');
     }
 
-      // res.render('message', {
-      //   infos: infos
-      // });
+      res.render('message', {
+        infos: infos
+      });
+
+  });
+});
+
+
+/* GET home page. */
+router.get('/json', function(req, res) {
+  Info.find({}, function(err,infos){
+    if(err){
+      res.send('somthing wrong');
+    }
+
+
 res.send(infos);
   });
 });
+
 
 
 router.get('/delete/:id', function(req, res){
