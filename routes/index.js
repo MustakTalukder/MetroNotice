@@ -9,9 +9,10 @@ router.get('/message', function(req, res) {
       res.send('somthing wrong');
     }
 
-      res.render('message', {
-        infos: infos
-      });
+      // res.render('message', {
+      //   infos: infos
+      // });
+res.send(infos);
   });
 });
 
